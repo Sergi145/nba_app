@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UserService} from "../user.service";
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+  users: any;
+
+  constructor(private userService: UserService) { }
+
+  ngOnInit(): void {
+    this.userService.getUsers().subscribe(data => {
+      this.users = data;
+    });
+  }
 
 }
