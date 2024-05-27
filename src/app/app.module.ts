@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HomeComponent } from './components/home/home.component';
 import {HttpClientModule} from "@angular/common/http";
+import {MaterialModule} from "./material/material.module";
+
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import {HttpClientModule} from "@angular/common/http";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MaterialModule
+
   ],
   providers: [
     provideAnimationsAsync()

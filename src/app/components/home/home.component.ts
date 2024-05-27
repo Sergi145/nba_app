@@ -1,20 +1,24 @@
 import { Component } from '@angular/core';
 import {UserService} from "../user.service";
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
+  /*todo poner internface */
   users: any;
+  teams:any;
+
 
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    this.userService.getUsers().subscribe(data => {
-      this.users = data;
+
+    this.userService.getTeams().subscribe(data => {
+      this.teams = data;
     });
   }
 

@@ -1,8 +1,9 @@
 <p>home works!</p>
-<div *ngIf="users">
-  <ul>
+<div *ngIf="teams">
+  <!--<ul>
     <li *ngFor="let user of users">
       {{ user.name }} - {{ user.email }}
     </li>
-  </ul>
+  </ul>-->
+  <mat-list><mat-list-item *ngFor="let team of teams">    <p>{{ team.full_name}}  </p> </mat-list-item></mat-list>
 </div>
