@@ -7,17 +7,19 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { HomeComponent } from './components/home/home.component';
 import {HttpClientModule} from "@angular/common/http";
 import {MaterialModule} from "./material/material.module";
+import {SharedModule} from "./shared/shared.module";
+import { LayoutComponent } from './components/layout/layout.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    SharedModule,
     MaterialModule
 
   ],

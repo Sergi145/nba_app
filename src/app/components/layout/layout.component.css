@@ -1,0 +1,7 @@
+.mdc-list-item__content span {
+  display: flex !important;
+}
+.mat-icon {
+  padding-right: 15px;
+}
+
