@@ -5,6 +5,7 @@ import { TeamsRoutingModule } from './teams-routing.module';
 import {MaterialModule} from "../material/material.module";
 import {LayoutComponent} from "../components/layout-page/layout.component";
 import {HomeComponent} from "../components/home-page/home.component";
+import {CardComponent} from "../components/card/card.component";
 
 
 
@@ -14,7 +15,8 @@ import {HomeComponent} from "../components/home-page/home.component";
 @NgModule({
   declarations: [
     LayoutComponent,
-    HomeComponent
+    HomeComponent,
+    CardComponent
 
   ],
   imports: [

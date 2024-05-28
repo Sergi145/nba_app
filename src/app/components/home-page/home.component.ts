@@ -9,16 +9,6 @@ import {UserService} from "../user.service";
 })
 export class HomeComponent {
   /*todo poner internface */
-  public logo_nba = [
-    {
-      icon: 'atlanta-hawks.svg',
-      url: './../assets/img'
-    },
-    {
-      icon: 'boston-celtics.svg',
-      url: './../assets/img'
-    }
-  ]
 
 
   users: any;

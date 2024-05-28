@@ -1,12 +1,7 @@
 <div *ngIf="teams">
   <mat-list class="grid">
     <mat-list-item *ngFor="let team of teams" class="mat-list-item">
-      <mat-card class="delete-button-container">
-        <mat-card-content>
-          <p class="mat-card-title">{{team.full_name}}</p>
-          <img src="./assets/img/atlanta-hawks.svg" alt="Foto del equipo {{team.full_name}}">
-        </mat-card-content>
-      </mat-card>
+     <app-card [team_prop]="team"></app-card>
     </mat-list-item>
   </mat-list>
 </div>
