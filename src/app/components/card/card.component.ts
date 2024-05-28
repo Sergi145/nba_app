@@ -17,6 +17,6 @@ export class CardComponent {
 
   onCardClick() {
     this.router.navigateByUrl(this.team_prop.id)
-    console.log(this.team_prop.id);
+    //console.log(this.team_prop.id);
   }
 }

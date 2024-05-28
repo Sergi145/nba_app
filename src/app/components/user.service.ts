@@ -17,6 +17,6 @@ export class UserService {
   }
 
   getPlayersbyId(id:string): Observable<any> {
-    return this.http.get(`${this.apiUrl}/players_attribute`);
+    return this.http.get(`${this.apiUrl}/players_attribute/`);
   }
 }

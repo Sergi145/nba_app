@@ -3,6 +3,7 @@ import {UserService} from "../user.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {switchMap} from "rxjs";
 
+
 @Component({
   selector: 'app-players-page',
   templateUrl: './players-page.component.html',
@@ -12,12 +13,24 @@ export class PlayersPageComponent implements OnInit {
     constructor(private playersService: UserService, private activatedRoute:ActivatedRoute) {
     }
 
+    players_teams: any[]= [];
+
     ngOnInit():void {
-      this.activatedRoute.params
-        .pipe(
-          switchMap(({id})=> this.playersService.getPlayersbyId(id)),
-        ).subscribe(params => {
-          console.log({params});
-      })
-    }
+      //console.log(this.activatedRoute.params);
+      this.activatedRoute.params.subscribe(params => {
+        this.playersService.getPlayersbyId(params["id"])
+          .subscribe(players => {
+              console.log(players);
+            for(let i=0; i<=players.length; i++) {
+
+            if(players[i].TEAM_ID == params["id"]) {
+                console.log(players[i]);
+                this.players_teams.push(players[i]);
+            }
+          }
+      });
+    })
+  }
 }
+
+
