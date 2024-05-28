@@ -3,12 +3,24 @@ import {UserService} from "../user.service";
 
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-home-page',
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
   /*todo poner internface */
+  public logo_nba = [
+    {
+      icon: 'atlanta-hawks.svg',
+      url: './../assets/img'
+    },
+    {
+      icon: 'boston-celtics.svg',
+      url: './../assets/img'
+    }
+  ]
+
+
   users: any;
   teams:any;
 

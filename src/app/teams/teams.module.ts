@@ -3,8 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { TeamsRoutingModule } from './teams-routing.module';
 import {MaterialModule} from "../material/material.module";
-import {LayoutComponent} from "../components/layout/layout.component";
-import {HomeComponent} from "../components/home/home.component";
+import {LayoutComponent} from "../components/layout-page/layout.component";
+import {HomeComponent} from "../components/home-page/home.component";
+
+
 
 
 
@@ -13,6 +15,7 @@ import {HomeComponent} from "../components/home/home.component";
   declarations: [
     LayoutComponent,
     HomeComponent
+
   ],
   imports: [
     CommonModule,
