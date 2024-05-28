@@ -1,0 +1,21 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+/* estilos que irian en la card*/
+
+.mat-list-item {
+  height: auto;
+}
+
+.mat-card-title {
+  text-align: center;
+  font-size: 1.35rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
