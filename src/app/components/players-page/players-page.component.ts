@@ -20,14 +20,21 @@ export class PlayersPageComponent implements OnInit {
       this.activatedRoute.params.subscribe(params => {
         this.playersService.getPlayersbyId(params["id"])
           .subscribe(players => {
-              console.log(players);
-            for(let i=0; i<=players.length; i++) {
+              //console.log(players);
+            //for(let i=0; i<=players.length; i++) {
 
-            if(players[i].TEAM_ID == params["id"]) {
-                console.log(players[i]);
-                this.players_teams.push(players[i]);
+           // if(players[i].TEAM_ID == params["id"] && players[i].ROSTERSTATUS === "Active") {
+                //console.log(players[i]);
+               // this.players_teams.push(players[i]);
+            //}
+          //}
+          players.map((player:any)=> {
+            //console.log(x);
+            if (player.TEAM_ID  == params["id"] && player.ROSTERSTATUS === "Active") {
+              this.players_teams.push(player);
             }
-          }
+          })
+            console.log(this.players_teams);
       });
     })
   }
