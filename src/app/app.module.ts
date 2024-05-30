@@ -13,6 +13,7 @@ import {SharedModule} from "./shared/shared.module";
 
 import localeES from  '@angular/common/locales/es';
 import {registerLocaleData} from '@angular/common';
+import { HomeComponent } from './components/home/home.component';
 registerLocaleData(localeES);
 
 

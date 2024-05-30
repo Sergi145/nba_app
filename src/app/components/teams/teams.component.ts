@@ -1,33 +1,27 @@
-import {Component, Input} from '@angular/core';
-
-import {ActivatedRoute, Router} from "@angular/router";
+import { Component } from '@angular/core';
 import {NbaService} from "../../services/nba.service";
 
 
 @Component({
-  selector: 'app-card',
+  selector: 'app-teams',
   templateUrl: './teams.component.html',
   styleUrl: './teams.component.css'
 })
-
 export class TeamsComponent {
+  /*todo poner internface */
 
-  constructor(private router: Router, private activatedRoute:ActivatedRoute, private userService:NbaService) {
-  }
 
-  @Input() team_prop: any;
+  users: any;
+  teams:any;
+
+
+  constructor(private nbaService: NbaService) { }
 
   ngOnInit(): void {
-    console.log("Iniciado");
+
+    this.nbaService.getTeams().subscribe(data => {
+      this.teams = data;
+    });
   }
-
-
-  onCardClick() {
-
-    this.userService.sendData(this.team_prop);
-    this.router.navigateByUrl(this.team_prop.id);
-    //console.log(this.team_prop.id);
-  }
-
 
 }

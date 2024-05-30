@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { NbaRoutingModule } from './nba-routing.module';
 import {MaterialModule} from "../material/material.module";
-import {MenuComponent} from "../../components/menu/menu.component";
-import {HomeComponent} from "../../components/home/home.component";
+import {LayoutComponent} from "../../components/layout/layout.component";
 import {TeamsComponent} from "../../components/teams/teams.component";
+import {TeamComponent} from "../../components/team/team.component";
 import {PlayersComponent} from "../../components/players/players.component";
 
 
@@ -16,9 +16,9 @@ import {PlayersComponent} from "../../components/players/players.component";
 
 @NgModule({
   declarations: [
-    MenuComponent,
-    HomeComponent,
+    LayoutComponent,
     TeamsComponent,
+    TeamComponent,
     PlayersComponent,
 
 

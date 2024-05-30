@@ -4,7 +4,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 
 
 @Component({
-  selector: 'app-players-page',
+  selector: 'app-players',
   templateUrl: './players.component.html',
   styleUrl: './players.component.css'
 })

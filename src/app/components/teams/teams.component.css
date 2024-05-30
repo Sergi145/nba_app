@@ -1,26 +1,16 @@
-img {
-  max-width: 100px;
-  height: 100px;
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
 }
+
+/* estilos que irian en la card*/
 
 .mat-list-item {
-  height: 300px;
+ height: auto;
 }
 
-.mat-card-title {
-  text-align: center;
-  font-size: 1.35rem;
-}
 
-mat-card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.clickable-card:hover {
-  cursor: pointer;
-}
 
 
 

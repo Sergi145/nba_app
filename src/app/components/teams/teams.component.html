@@ -1,6 +1,7 @@
-<mat-card class="delete-button-container  clickable-card" (click)="onCardClick()" >
-  <mat-card-content>
-    <p class="mat-card-title">{{team_prop.full_name}}</p>
-    <img src="../../../assets/img/{{team_prop.img}}" alt="Foto del equipo {{team_prop.full_name}}">
-  </mat-card-content>
-</mat-card>
+<div *ngIf="teams">
+  <mat-list class="grid">
+    <mat-list-item *ngFor="let team of teams" class="mat-list-item">
+     <app-team [team_prop]="team"></app-team>
+    </mat-list-item>
+  </mat-list>
+</div>

@@ -7,7 +7,7 @@
       <span class="soacer"></span>
     </mat-toolbar>
     <mat-nav-list>
-      <mat-list-item *ngFor="let item of sidebar" [routerLink]="item.url">
+      <mat-list-item *ngFor="let item of sidebarItems" [routerLink]="item.url">
         <mat-icon>{{item.icon}}</mat-icon>
         {{item.label}}
       </mat-list-item>
@@ -18,7 +18,7 @@
   <mat-toolbar color="primary">
     <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
     <div>
-      <button mat-button>Inicio</button>
+      <button mat-button routerLink="/home">Inicio</button>
       <button mat-button>Logout</button>
     </div>
   </mat-toolbar>
