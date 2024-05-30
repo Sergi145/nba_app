@@ -13,12 +13,14 @@ import {PlayersPageComponent} from "../components/players-page/players-page.comp
 
 
 
+
 @NgModule({
   declarations: [
     LayoutComponent,
     HomeComponent,
     CardComponent,
-    PlayersPageComponent
+    PlayersPageComponent,
+
 
   ],
   imports: [

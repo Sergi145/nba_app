@@ -14,9 +14,18 @@ export class PlayersPageComponent implements OnInit {
     }
 
     players_teams: any[]= [];
+    info_team:any;
 
     ngOnInit():void {
       //console.log(this.activatedRoute.params);
+
+      this.playersService.data$.subscribe( info => {
+          this.info_team = info;
+
+          console.log(info);
+      })
+
+
       this.activatedRoute.params.subscribe(params => {
         this.playersService.getPlayersbyId(params["id"])
           .subscribe(players => {
