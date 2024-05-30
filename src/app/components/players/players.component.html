@@ -1,9 +1,13 @@
-
+<h2></h2>
 <mat-list>
   <mat-list-item  *ngFor="let player of players_teams">
-    <span matListItemTitle>{{player.DISPLAY_FIRST_LAST}}</span>
-    <span matListItemLine>{{player.POSITION}}</span>
-    <span matListItemLine>{{player.BIRTHDATE | date:'dd MMMM, yyyy'}}</span>
+    <span matListItemTitle class="content">{{player.DISPLAY_FIRST_LAST}}</span>
+    <span matListItemLine><b>Posicion:</b>{{player.POSITION}}</span>
+    <span matListItemLine><b>Fecha de nacimiento:</b>{{player.BIRTHDATE | date:'dd MMMM, yyyy'}}</span>
+    <div class="darksoul-card3">
+      <div class="circle3"></div>
+      <img src="https://darksoul-codepen.github.io/assets/images/dribbble_logo.png" alt="DarkSoul - Dribbble" width="25" height="25" />
+    </div>
   </mat-list-item>
 </mat-list>
 

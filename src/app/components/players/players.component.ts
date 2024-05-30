@@ -20,10 +20,7 @@ export class PlayersComponent implements OnInit {
 
       this.playersService.data$.subscribe( info => {
           this.info_team = info;
-
-          console.log(info);
       })
-
 
       this.activatedRoute.params.subscribe(params => {
         this.playersService.getPlayersbyId(params["id"])
