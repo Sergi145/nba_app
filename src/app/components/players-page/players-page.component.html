@@ -1,1 +1,9 @@
-<p *ngFor="let player of players_teams">{{player.DISPLAY_FIRST_LAST}}</p>
+<mat-list>
+  <mat-list-item  *ngFor="let player of players_teams">
+    <span matListItemTitle>{{player.DISPLAY_FIRST_LAST}}</span>
+    <span matListItemLine>{{player.POSITION}}</span>
+  </mat-list-item>
+</mat-list>
+
+
+
