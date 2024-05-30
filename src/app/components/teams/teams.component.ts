@@ -1,16 +1,16 @@
 import {Component, Input} from '@angular/core';
 
 import {ActivatedRoute, Router} from "@angular/router";
-import {UserService} from "../user.service";
+import {NbaService} from "../../services/nba.service";
 
 
 @Component({
   selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.css'
+  templateUrl: './teams.component.html',
+  styleUrl: './teams.component.css'
 })
-export class CardComponent {
-  constructor(private router: Router, private activatedRoute:ActivatedRoute, private userService:UserService) {
+export class TeamsComponent {
+  constructor(private router: Router, private activatedRoute:ActivatedRoute, private userService:NbaService) {
   }
 
   @Input() team_prop: any;

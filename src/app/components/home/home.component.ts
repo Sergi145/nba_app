@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {UserService} from "../user.service";
+import {NbaService} from "../../services/nba.service";
 
 
 @Component({
@@ -15,7 +15,7 @@ export class HomeComponent {
   teams:any;
 
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: NbaService) { }
 
   ngOnInit(): void {
 

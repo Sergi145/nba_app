@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {HomeComponent} from "../components/home-page/home.component";
-import {LayoutComponent} from "../components/layout-page/layout.component";
-import {PlayersPageComponent} from "../components/players-page/players-page.component";
+import {HomeComponent} from "../../components/home/home.component";
+import {MenuComponent} from "../../components/menu/menu.component";
+import {PlayersComponent} from "../../components/players/players.component";
 
 const routes: Routes = [
   {
     path: '',
-    component: LayoutComponent,
+    component: MenuComponent,//Pantalla Inicial
     children: [
       { path: 'teams', component: HomeComponent },
-      { path: ':id', component: PlayersPageComponent }
+      { path: ':id', component: PlayersComponent }
 
     ]
   }
