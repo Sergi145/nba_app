@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {NbaService} from "../../services/nba.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {switchMap} from "rxjs";
 
 
 @Component({
@@ -38,7 +37,7 @@ export class PlayersComponent implements OnInit {
             //}
           //}
           players.map((player:any)=> {
-            //console.log(x);
+
             if (player.TEAM_ID  == params["id"] && player.ROSTERSTATUS === "Active") {
               this.players_teams.push(player);
             }

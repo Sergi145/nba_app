@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { TeamsRoutingModule } from './teams-routing.module';
+import { NbaRoutingModule } from './nba-routing.module';
 import {MaterialModule} from "../material/material.module";
 import {MenuComponent} from "../../components/menu/menu.component";
 import {HomeComponent} from "../../components/home/home.component";
@@ -25,9 +25,9 @@ import {PlayersComponent} from "../../components/players/players.component";
   ],
   imports: [
     CommonModule,
-    TeamsRoutingModule,
+    NbaRoutingModule,
     MaterialModule
 
   ]
 })
-export class TeamsModule { }
+export class NbaModule { }

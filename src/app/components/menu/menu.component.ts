@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent {
 
+
+  ngOnInit(): void {
+    console.log("Iniciado");
+  }
+
     public sidebar = [
       {
         label: 'Equipos',

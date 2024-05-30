@@ -9,11 +9,17 @@ import {NbaService} from "../../services/nba.service";
   templateUrl: './teams.component.html',
   styleUrl: './teams.component.css'
 })
+
 export class TeamsComponent {
+
   constructor(private router: Router, private activatedRoute:ActivatedRoute, private userService:NbaService) {
   }
 
   @Input() team_prop: any;
+
+  ngOnInit(): void {
+    console.log("Iniciado");
+  }
 
 
   onCardClick() {
