@@ -2,6 +2,7 @@
   <mat-list-item  *ngFor="let player of players_teams">
     <span matListItemTitle>{{player.DISPLAY_FIRST_LAST}}</span>
     <span matListItemLine>{{player.POSITION}}</span>
+    <span matListItemLine>{{player.BIRTHDATE | date:'dd MMMM, yyyy'}}</span>
   </mat-list-item>
 </mat-list>
 
