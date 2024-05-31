@@ -12,8 +12,7 @@ import {NbaService} from "../../services/nba.service";
 
 export class TeamComponent {
 
-  constructor(private router: Router, private activatedRoute:ActivatedRoute, private nbaService:NbaService) {
-  }
+  constructor(private router: Router, private activatedRoute:ActivatedRoute, private nbaService:NbaService) {}
 
   @Input() team_prop: any;
 
@@ -24,9 +23,9 @@ export class TeamComponent {
 
   onCardClick() {
 
-    this.nbaService.sendData(this.team_prop);
-    this.router.navigateByUrl(this.team_prop.id);
-    //console.log(this.team_prop.id);
+    this.router.navigateByUrl(`/team/${this.team_prop.id}`, { state: { data: this.team_prop } });
+    // this.nbaService.sendData(this.team_prop);
+
   }
 
 

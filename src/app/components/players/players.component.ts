@@ -9,18 +9,20 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrl: './players.component.css'
 })
 export class PlayersComponent implements OnInit {
-    constructor(private playersService: NbaService, private activatedRoute:ActivatedRoute) {
+    constructor(private playersService: NbaService, private activatedRoute:ActivatedRoute, private router: Router) {
+      const navigation = this.router.getCurrentNavigation();
+      const data = navigation?.extras?.state?.['data'];
+      this.info_team = data;
     }
 
     players_teams: any[]= [];
-    info_team:any;
+    info_team:any
 
     ngOnInit():void {
-      //console.log(this.activatedRoute.params);
 
-      this.playersService.data$.subscribe( info => {
+      /*this.playersService.data$.subscribe( info => {
           this.info_team = info;
-      })
+      })*/
 
       this.activatedRoute.params.subscribe(params => {
         this.playersService.getPlayersbyId(params["id"])
